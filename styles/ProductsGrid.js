@@ -23,3 +23,4 @@ export default function ProductsGrid({ products }) {
     </StyledProductsGrid>
   );
 }
+
