@@ -2,14 +2,13 @@ import { primary } from "@/lib/color";
 import styled, { css } from "styled-components";
 
 export const ButtonStyle = css`
-  border: 0;
-  padding: 5px 15px;
+  padding: 2px 10px;
   border-radius: 5px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  font-weight: 500;
+  font-size: 15px;
   svg {
     height: 16px;
     margin-right: 5px;
@@ -80,6 +79,12 @@ export const ButtonStyle = css`
         height: 20px;
       }
     `}
+ 
+    @media screen and (max-width: 520px){
+      padding: 1px 7px;
+      font-size: 13px;
+  }
+
 `;
 
 const StyledButton = styled.button`

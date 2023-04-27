@@ -5,11 +5,18 @@ const StyledProductsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
+  @media screen and (max-width: 1027px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media screen and (max-width: 426px){
-    grid-template-columns:  1fr;
+  @media screen and (max-width: 445px){
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
   }
 `;
 

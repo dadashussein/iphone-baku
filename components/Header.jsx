@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 
 const StyledNav = styled.nav`
   ${(props) => (props.menu ? `display: block;` : `display : none;`)}
-  gap: 15px;
+  gap: 35px;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -40,23 +40,28 @@ const StyledNav = styled.nav`
 const NavLink = styled(Link)`
   display: block;
   color: #aaa;
+  font-size: 0.9rem;
   text-decoration: none;
   padding: 10px 0;
   @media screen and (min-width: 768px) {
     padding: 0;
   }
+  &:hover {
+    border-bottom: 1.5px solid #5542f6;
+  }
 `;
 const NavButton = styled.button`
   background-color: transparent;
-  width: 30px;
-  height: 30px;
+  display: none;
+  width: 40px;
+  height: 40px;
   border: 0;
   color: #fff;
   cursor: pointer;
   position: relative;
   z-index: 3;
-  @media screen and (min-width: 768px) {
-    display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
   }
 `;
 
@@ -67,7 +72,7 @@ const Header = () => {
     <StyledHeader>
       <Center>
         <Wrapper>
-          <Logo href={"/"}>İphone Nakhchivan</Logo>
+          <Logo href={"/"}>Logo</Logo>
           <StyledNav menu={menu}>
             <NavLink href={"/"}>Ana səhifə</NavLink>
             <NavLink href={"/products"}>Bütün məhsullar</NavLink>

@@ -4,6 +4,7 @@ import Button from "./Button";
 import ButtonLink from "./ButtonLink";
 import CartIcon from "./icons/CartIcon";
 import { useCart } from "./CartContext";
+import Image from "next/image";
 
 const Bg = styled.div`
   background-color: #222;
@@ -26,29 +27,27 @@ const Desc = styled.p`
 `;
 
 const ColumnsWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   gap: 40px;
   img {
     max-width: 100%;
-    max-height: 200px;
-    display: block;
     margin: 0 auto;
   }
-  div:nth-child(1) {
-    order: 2;
-  }
-
-  @media screen and (min-width: 768px) {
-    grid-template-columns: 1.1fr 0.9fr;
-    div:nth-child(1) {
-      order: 0;
-    }
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
     img {
-      max-width: 100%;
+      max-width: 300px;
+      gap: 0;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    img {
+      max-width: 250px;
+      gap: 0;
     }
   }
 `;
+
 
 const Column = styled.div`
   display: flex;
