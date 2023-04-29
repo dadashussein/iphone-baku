@@ -76,7 +76,6 @@ const Header = () => {
           <StyledNav menu={menu}>
             <NavLink href={"/"}>Ana səhifə</NavLink>
             <NavLink href={"/products"}>Bütün məhsullar</NavLink>
-            <NavLink href={"/categories"}>Kategoriyalar</NavLink>
             <NavLink href={"/account"}>Şəxsi kabinet</NavLink>
             <NavLink href={"/cart"}>Səbət({cartProducts.length})</NavLink>
           </StyledNav>

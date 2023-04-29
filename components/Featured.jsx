@@ -75,7 +75,7 @@ const Featured = ({ product }) => {
               <Desc>{product.description}</Desc>
               <ButtonsWrapper>
                 <ButtonLink
-                  href={"/products/" + product._id}
+                  href={"/product/" + product._id}
                   outline={1}
                   white={1}
                 >
@@ -89,7 +89,7 @@ const Featured = ({ product }) => {
             </div>
           </Column>
           <Column>
-            <img src={product.images[0]} alt="" />
+            <img src={product.images[2]} alt="" />
           </Column>
         </ColumnsWrapper>
       </Center>
